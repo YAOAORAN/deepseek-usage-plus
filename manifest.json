@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek Cache Hit Rate",
+  "version": "1.0.0",
+  "description": "DeepSeek用量页面缓存命中率计算",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://platform.deepseek.com/usage*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_end"
+    },
+    {
+      "matches": [
+        "https://platform.deepseek.com/usage*"
+      ],
+      "js": [
+        "chart.js"
+      ],
+      "run_at": "document_end",
+      "world": "MAIN"
+    }
+  ]
+}
