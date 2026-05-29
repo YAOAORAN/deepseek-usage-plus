@@ -264,7 +264,7 @@
 
     var legend = document.createElement('span')
     legend.className = '__ds-legend'
-    legend.style.cssText = 'margin-left:auto;color:#4ade80;font-weight:600;font-size:13px;white-space:nowrap;'
+    legend.style.cssText = 'margin-left:auto;color:#60B3FE;font-weight:600;font-size:13px;white-space:nowrap;'
     legend.textContent = '缓存命中率 平均 ' + avg + '%'
     headerRow.appendChild(legend)
   }
@@ -298,7 +298,7 @@
     avgLine.setAttribute('y1', avgY)
     avgLine.setAttribute('x2', data[data.length - 1].x + 4)
     avgLine.setAttribute('y2', avgY)
-    avgLine.setAttribute('stroke', 'rgba(74,222,128,0.35)')
+    avgLine.setAttribute('stroke', 'rgba(96,179,254,0.35)')
     avgLine.setAttribute('stroke-width', '1')
     avgLine.setAttribute('stroke-dasharray', '4,3')
     g.appendChild(avgLine)
@@ -310,7 +310,7 @@
     areaD += 'L' + points[points.length - 1].x.toFixed(1) + ',' + (chartRect.bottom) + ' L' + points[0].x.toFixed(1) + ',' + (chartRect.bottom) + ' Z'
     var area = document.createElementNS('http://www.w3.org/2000/svg', 'path')
     area.setAttribute('d', areaD)
-    area.setAttribute('fill', 'rgba(74,222,128,0.12)')
+    area.setAttribute('fill', 'rgba(96,179,254,0.12)')
     g.appendChild(area)
 
     var pathD = ''
@@ -320,7 +320,7 @@
     var line = document.createElementNS('http://www.w3.org/2000/svg', 'path')
     line.setAttribute('d', pathD)
     line.setAttribute('fill', 'none')
-    line.setAttribute('stroke', '#4ade80')
+    line.setAttribute('stroke', '#60B3FE')
     line.setAttribute('stroke-width', '2')
     line.setAttribute('stroke-linejoin', 'round')
     g.appendChild(line)
@@ -330,7 +330,7 @@
       dot.setAttribute('cx', points[i].x.toFixed(1))
       dot.setAttribute('cy', points[i].y.toFixed(1))
       dot.setAttribute('r', '2')
-      dot.setAttribute('fill', '#4ade80')
+      dot.setAttribute('fill', '#60B3FE')
       dot.setAttribute('stroke', '#fff')
       dot.setAttribute('stroke-width', '1')
       g.appendChild(dot)
@@ -343,7 +343,7 @@
       gl.setAttribute('y1', gy)
       gl.setAttribute('x2', sw - 1)
       gl.setAttribute('y2', gy)
-      gl.setAttribute('stroke', 'rgba(74,222,128,0.1)')
+      gl.setAttribute('stroke', 'rgba(96,179,254,0.1)')
       gl.setAttribute('stroke-width', '1')
       g.appendChild(gl)
     }
@@ -361,13 +361,13 @@
     var tipLine = document.createElementNS('http://www.w3.org/2000/svg', 'line')
     tipLine.setAttribute('y1', chartRect.top.toString())
     tipLine.setAttribute('y2', chartRect.bottom.toString())
-    tipLine.setAttribute('stroke', 'rgba(74,222,128,0.5)')
+    tipLine.setAttribute('stroke', 'rgba(96,179,254,0.5)')
     tipLine.setAttribute('stroke-width', '1')
     tipLine.setAttribute('stroke-dasharray', '3,2')
     tipLine.style.display = 'none'
 
     var tipText = document.createElementNS('http://www.w3.org/2000/svg', 'text')
-    tipText.setAttribute('fill', '#4ade80')
+    tipText.setAttribute('fill', '#60B3FE')
     tipText.setAttribute('font-size', '11')
     tipText.setAttribute('font-weight', 'bold')
 
@@ -481,7 +481,7 @@
     if (prev7Total > 0) {
       var changeText = document.createElement('div')
       var changeRate = ((weekTotal - prev7Total) / prev7Total * 100).toFixed(1)
-      var color = changeRate > 0 ? '#ef4444' : changeRate < 0 ? '#4ade80' : 'rgb(var(--ds-rgb-label-2))'
+      var color = changeRate > 0 ? '#ef4444' : changeRate < 0 ? '#60B3FE' : 'rgb(var(--ds-rgb-label-2))'
       var arrow = changeRate > 0 ? '↑' : changeRate < 0 ? '↓' : ''
       changeText.style.cssText = 'font-size:12px;color:' + color + ';margin-top:4px;font-weight:500;'
       changeText.textContent = arrow + Math.abs(changeRate) + '% vs 上周'

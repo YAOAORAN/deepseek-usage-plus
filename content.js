@@ -107,7 +107,7 @@
       dot.style.cssText = `
         width: 12px;
         height: 12px;
-        background: #4ade80;
+        background: #60B3FE;
         margin-right: 8px;
         border-radius: 2px;
         display: inline-block;
@@ -123,7 +123,7 @@
       const valueRow = document.createElement('div')
       valueRow.className = 'ds-cache-rate-value'
       valueRow.style.cssText = `
-        color: #4ade80;
+        color: #60B3FE;
         font-weight: 600;
         font-variant-numeric: tabular-nums;
         display: flex;
